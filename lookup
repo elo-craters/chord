@@ -1,0 +1,2 @@
+#!/bin/bash
+git clone $(cat dns.csv | grep "$1" | sed "s/,.*//g") $(export SEARCH="$1"; cat dns.csv | grep "$SEARCH" | sed "s/.*,//g")
